@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070c16">
+  <meta name="description" content="E.B AI is an early-stage open-source initiative exploring trustworthy, accessible AI automation. Explore the vision and try a working, local-only task board.">
+  <title>E.B AI — Intelligence, put to work.</title>
+  <link rel="icon" href="/public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/src/styles.css">
+  <script type="module" src="/src/app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="E.B AI home"><span class="brand-mark">E<span>·</span>B</span><span>AI</span></a>
+    <nav aria-label="Main navigation"><a href="#mission">Mission</a><a href="#capabilities">Vision</a><a href="#workspace">Open workspace</a></nav>
+    <a class="nav-cta" href="#workspace">Explore prototype <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> EARLY-STAGE · OPEN-SOURCE DIRECTION</div>
+        <h1 id="hero-title">Intelligence,<br><em>put to work.</em></h1>
+        <p class="lead">An ambitious exploration of what comes after the chatbot. One thoughtful interface for AI, tools, and the work that matters.</p>
+        <div class="hero-actions"><a class="primary-button" href="#workspace">Explore the live prototype <span>↗</span></a><a class="secondary-button" href="#mission">Our mission <span>↓</span></a></div>
+        <div class="hero-foot"><span class="line-dot"></span><span>Built in the open, one verifiable step at a time.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative visual representation of a connected assistant platform">
+        <div class="orb-glow"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="core"><div class="core-inner"><span>E·B</span><small>AI</small></div></div>
+        <div class="float-label float-a"><span class="label-icon">◇</span> Understand</div>
+        <div class="float-label float-b"><span class="label-icon">⌘</span> Coordinate</div>
+        <div class="float-label float-c"><span class="label-icon">✓</span> Verify</div>
+      </div>
+    </section>
+    <section class="trust-strip shell" aria-label="Project principles"><span>LOCAL-FIRST THINKING</span><span>TRANSPARENT AUTOMATION</span><span>MODULAR DESIGN</span><span>PERMISSION-BASED ACTIONS</span></section>
+    <section class="section shell" id="mission">
+      <div class="section-kicker">01 / THE WHY</div>
+      <div class="mission-layout"><h2>AI can explain almost anything.<br><span>But can it reliably help you do it?</span></h2><div class="mission-right"><p>Today's most powerful AI capabilities are often scattered across disconnected services and complex workflows. E.B AI explores a more coherent alternative: natural interaction, interoperable tools, and accountable execution.</p><p>Our ambition is accessibility, not complexity. This is a project in development—not a claim that a finished autonomous platform already exists.</p></div></div>
+    </section>
+    <section class="section shell" id="capabilities">
+      <div class="section-kicker">02 / THE DIRECTION</div><div class="section-heading"><h2>One vision.<br><span>Many possibilities.</span></h2><p>Exploration areas, not shipped feature claims.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon">✦</div><h3>Intelligence without silos</h3><p>Explore a flexible foundation for local and cloud AI systems without locking people into one model.</p><span class="feature-tag">RESEARCH DIRECTION</span></article>
+        <article class="feature"><div class="feature-icon">⇄</div><h3>Tools that work together</h3><p>Design integrations around explicit permission, understandable execution, and reusable interfaces.</p><span class="feature-tag">DESIGN DIRECTION</span></article>
+        <article class="feature"><div class="feature-icon">◎</div><h3>Trust, built into the loop</h3><p>Make progress, uncertainty, failures, and actual outcomes visible rather than pretending that an action succeeded.</p><span class="feature-tag">ENGINEERING PRIORITY</span></article>
+        <article class="feature"><div class="feature-icon">◈</div><h3>Beautifully simple</h3><p>Bring complex workflows into a calm interface that works for developers, creators, and everyday users.</p><span class="feature-tag">PRODUCT VISION</span></article>
+      </div>
+    </section>
+    <section class="workspace-section" id="workspace">
+      <div class="shell"><div class="section-kicker">03 / SOMETHING YOU CAN ACTUALLY TRY</div><div class="section-heading workspace-heading"><h2>Meet the<br><span>workflow board.</span></h2><p>A small, real, open-source component. Your tasks stay in this browser; no backend, tracking, or AI calls.</p></div>
+        <div class="workspace" aria-label="Local task workflow board">
+          <div class="workspace-top"><div class="window-lights" aria-hidden="true"><i></i><i></i><i></i></div><div class="workspace-title"><span class="workspace-spark">✧</span> E.B AI / Local workflow board</div><span class="working-label"><span></span> RUNNING LOCALLY</span></div>
+          <div class="workspace-body">
+            <div class="board-main"><div class="board-intro"><div><div class="board-overline">YOUR WORKSPACE</div><h3>Plan it. Track it. Verify it.</h3><p>An honest, interactive task manager—not simulated AI execution.</p></div><div class="progress"><strong id="completion">0%</strong><small>COMPLETE</small></div></div>
+              <form id="add-form" class="add-form"><label class="sr-only" for="task-input">New task</label><input id="task-input" maxlength="140" placeholder="Add something meaningful to work on..." required><button type="submit">+ Add task</button></form>
+              <div class="task-list" id="task-list" aria-live="polite"></div>
+              <div class="board-footer"><span id="board-count">0 tasks</span><div><button class="text-button" type="button" id="sample-button">Load sample</button><button class="text-button" type="button" id="export-button">Export JSON ↓</button><button class="text-button" type="button" id="clear-button">Clear</button></div></div>
+            </div>
+            <aside class="board-side"><div class="board-overline">REAL FUNCTIONALITY</div><div class="metric"><strong id="stat-total">0</strong><span>Total tasks</span></div><div class="metric"><strong id="stat-active">0</strong><span>In progress</span></div><div class="metric"><strong id="stat-done">0</strong><span>Completed</span></div><div class="metric"><strong id="stat-blocked">0</strong><span>Blocked</span></div><div class="side-note"><span>✳</span><p>No account required. No credentials. Task data is stored locally in your browser.</p></div></aside>
+          </div>
+        </div>
+        <p class="board-notice" id="notice" role="status">Add a task to begin. This board tracks human-updated statuses and does not perform external actions.</p>
+      </div>
+    </section>
+    <section class="section shell roadmap" id="roadmap"><div class="section-kicker">04 / THE PATH FORWARD</div><div class="section-heading"><h2>Build carefully.<br><span>Earn trust.</span></h2><p>A proposed roadmap; milestones are not release commitments.</p></div><div class="roadmap-list"><div><span>01</span><h3>Open foundation</h3><p>Public documentation, a small useful module, tests, and transparent security posture.</p><b>CURRENT</b></div><div><span>02</span><h3>Extensible assistant core</h3><p>Research local / cloud model adapters, tool interfaces, and structured results.</p><b>PLANNED</b></div><div><span>03</span><h3>Permissioned integrations</h3><p>Explore safe connections, audit trails, and explicit user approval.</p><b>FUTURE</b></div><div><span>04</span><h3>Community contributions</h3><p>Contributor-friendly modules, documentation, and feedback from real users.</p><b>FUTURE</b></div></div></section>
+    <section class="closing shell"><div class="closing-card"><div class="section-kicker">THE NEXT CHAPTER</div><h2>The future should be<br><em>useful, not just intelligent.</em></h2><p>E.B AI is a work in progress. Follow the code, challenge the assumptions, and help make trustworthy automation more accessible.</p><a href="#workspace" class="primary-button">Try the prototype again ↗</a></div></section>
+  </main>
+  <footer class="footer shell"><span class="brand brand-footer"><span class="brand-mark">E<span>·</span>B</span><span>AI</span></span><p>Experimental open-source foundation · No affiliation with Anthropic, Google, or other providers.</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "eb-ai-open-source",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public-facing open-source foundation and local workflow board for E.B AI",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "npm test && node scripts/security-check.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
